@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: #12215B;
+    border-radius: 5px;
+}
+
+
+body{
+   width: 100%;
+}
+
+/* ============= HEADER ============*/
+
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+    backdrop-filter: blur(13.5px);
+    box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.555);
+    z-index: 100;
+}
+
+.navbar{
+    display: flex;
+    
+}
+
+.navbar .item{
+    margin-right: .5rem;
+}
+
+.navbar .item a{
+    color: white;
+    padding: 3px;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.555);
+    border-radius: 3px;
+    transition: 300ms;
+}
+
+.navbar .item a:hover{
+    box-shadow: inset 100px 0px 0px 0px rgba(0, 0, 0, 0.555);
+}
+
+header h2{
+    color: red;
+}
+
+header h2 span{
+    color: white;
+}
+
+/* ============= MAIN ============*/
+
+main{
+    background-image: url('https://images4.alphacoders.com/936/936378.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.main-wrapper h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 5px 5px 10px #12215B;
+}
+
+.main-wrapper input{
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    border-radius: 3px;
+    outline: none;
+    margin: .5rem;
+}
+
+.btns{
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+}
+
+.btns button{
+    width: 50%;
+    padding: 10px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(45deg, #12215B, #091a62);
+    cursor: pointer;
+}
+
+.btns button:first-child{
+    border-right: 2px solid black;
+    border-radius: 5px 0px 0px 0px;
+}
+
+.btns button:last-child{
+    border-radius: 0px 5px 0px 0px;
+}
+
+.btnsRemove{
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    border-top: 2px solid black;
+}
+
+.remove{
+    background: linear-gradient(45deg, #12215B, #091a62);
+    width: 50%;
+    padding: 10px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.remove:first-child{
+    border-radius: 0px 0px 0px 5px;
+    border-right: 2px solid black;
+}
+
+.remove:last-child{
+    border-radius: 0px 0px 5px 0px;
+}
+
+button{
+    box-shadow: inset 0px 0px 0px white;
+    transition: 300ms;
+}
+
+button:hover{
+    box-shadow: inset 170px 0px 0px white;
+    color: #12215B;
+}
+
+
+
+#filmes{
+    background-color: rgb(0, 0, 0);
+    box-shadow:  0px 0px 0px transparent, 0px -25px 10px rgb(0, 0, 0);
+    border-bottom: 2px solid rgba(53, 53, 53, 0.327);
+}
+
+#animes{
+    background-color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgba(53, 53, 53, 0.327);
+}
+
+.movie, .anime{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#filmes h3, #animes h3{
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    padding-top: .5rem;
+}
+
+.banner{
+    width: 270px;
+    height: 100%;
+    max-height: 355px;
+    position: relative;
+    cursor: pointer;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.movieBanner{
+    width: 100%;
+    height: 100%;
+}
+
+.description{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%; 
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.779);
+    visibility: hidden;
+    transition: 300ms;
+    padding: .5rem;
+}
+
+.banner:hover > .description{
+    visibility: visible;
+    top: 0 ;
+    overflow: auto;
+}
+
+.description span{
+    font-weight: 300;
+    font-size: .9rem;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+    color: rgb(224, 224, 224);
+}
+
+.description p{
+    font-size: 13px;
+    max-width: 90%;
+}
+
+/* ============= FOOTER ============*/
+
+footer{
+    height: 20vh;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer a{
+    color: white;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* ============= */
+
+@media screen and (max-width: 450px){
+    header {
+        flex-direction: column;
+        
+    }
+    .main-wrapper h2{
+        font-size: 1.75rem;
+    }
+    .main-wrapper input{
+        width: 70%;
+    }
+    button{
+        box-shadow: inset 0px 0px 0px white;
+        transition: 500ms;
+    }
+    button:hover{
+        box-shadow: inset 310px 0px 0px white;
+    }
+    .btnsRemove{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        align-items: center;
+        border: none;
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        align-items: center;
+    }
+    .btns button, .btnsRemove button{
+        border-right: none;
+        border-bottom: 2px solid black;
+        width: 70%;
+    }
+    .btns button:first-child{
+        border-right: none;
+        border-bottom: 2px solid black;
+        border-radius: 5px 0px 0px 0px;
+    }
+    .btns button:last-child{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .remove:first-child{
+        border-right: none;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .remove:last-child{
+        border-bottom: none;
+        border-right: none;
+        border-radius: 0px 0px 5px 5px;
+    }
+}

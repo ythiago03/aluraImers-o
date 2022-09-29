@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dedede;
+}
+
+main{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wrapper{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns{
+    margin-top: 1rem;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.btns button{
+    height: 35px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-weight: 700;
+}
+
+.btns button:disabled{
+    cursor: auto;
+}
+
+.cards{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.cardPlayer, .card{
+    width: 250px;
+    height: 450px;
+    background-color: #786f6a;
+    border: 5px solid black;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 5px;
+}
+
+.cardImg{
+     width: 200px;
+     height: 170px;
+     border: 3px solid black;
+     margin: 5px;
+}
+
+.cardImg img{
+    width: 100%;
+    height: 100%;
+}
+
+.cardPlayer h1, .card h1{
+    font-size: 1.55rem;
+    font-weight: 700;
+}
+
+.cardDesc{
+    width: 200px;
+    height: 100px;
+    overflow-y: auto;
+    font-size: 13px;
+    font-weight: 500; 
+    margin: 10px;
+    border: 3px solid black;
+    background-color: rgb(194, 194, 194);
+}
+
+.atributos, .attSpans{
+    width: 200px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.vs{
+    width: 100px;
+    height: 80px;
+}
+
+.closed {
+    background-image: url('https://i.pinimg.com/originals/d2/87/c5/d287c5727c06c683ce274ac614756f12.png');
+    background-position: center;
+    border: none;
+    border-radius: none;
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.closed h1, 
+.closed .atributos, 
+.closed .attSpans, 
+.closed .cardDesc, 
+.closed .cardImg {
+    display: none;
+}
